@@ -24,7 +24,7 @@ PlayersService = {
     return Players.find().count() > 0;
   },
   addPlayer: function(name){
-    Players.insert({name: name, score: this._randomScore()});
+    Players.insert({name: name, score: 0});
   },
   removePlayer: function(playerId){
     Players.remove(playerId);
@@ -32,6 +32,9 @@ PlayersService = {
   generateRandomPlayers: function () {
     var names = ["Ada Lovelace",
                  "Grace Hopper",
+                 "Marie Curie",
+                 "Carl Friedrich Gauss",
+                 "Nikola Tesla",
                  "Claude Shannon"];
     for (var i = 0; i < names.length; i++) {
       Players.insert({name: names[i], score: this._randomScore()});

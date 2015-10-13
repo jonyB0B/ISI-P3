@@ -1,3 +1,4 @@
+
 describe('PlayersService', function () {
   'use strict';
 
@@ -40,6 +41,7 @@ describe('PlayersService', function () {
       expect(Players.update.calls.argsFor(0)).toEqual([playerId, {$inc: {score: 5}}]);
     });
   });
+
 
   describe('playersExist', function () {
     it('should return true when players exist', function () {
